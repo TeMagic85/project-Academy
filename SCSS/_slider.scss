@@ -1,0 +1,216 @@
+.wrapper {
+    // .wrapper__slider
+    &__slider {
+        display: grid;
+        grid-template-columns: auto 1.6fr 1fr auto;
+        grid-template-rows: 1fr auto;
+        padding-top: 63px;
+        background: #777777;
+    }
+}
+.slide {
+    display: block;
+    opacity: 1;
+    grid-column: 1/5;
+    grid-row: 1/3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s linear;
+}
+.vsbl {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.-active {
+    display: block;
+    opacity: 1;
+    grid-column: 1/5;
+    grid-row: 1/3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s linear;
+}
+._icon-arrow-prev:before {
+    content: url('../icons/icon-prev.svg');
+    padding-left: 50px;
+    cursor: pointer;
+    @media screen and(max-width:768px) {
+        padding-left: 20px;
+    }
+}
+._icon-arrow-next:before {
+    content: url('../icons/icon-next.svg');
+    padding-right: 50px;
+    cursor: pointer;
+    @media screen and(max-width:768px) {
+        padding-right: 20px;
+    }
+}
+.slider__arrow {
+    background: inherit;
+    border: none;
+}
+
+.slider-button-prev,
+.slider-button-next {
+    display: grid;
+    text-align: center;
+}
+.slider-button-prev {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.slider-button-next {
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+
+.container-navigation {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin-right: 30px;
+    @media screen and (max-width: 768px) {
+        grid-column: 2/4;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    @media screen and (max-width: 320px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @media screen and (max-width: 540px) {
+        & h2 {
+            padding-top: 40%;
+        }
+    }
+    & h2 {
+        font-size: 36px;
+        font-weight: 100;
+        line-height: 42px;
+        color: white;
+        margin: 0;
+        padding-top: 53.2%;
+        padding-bottom: 0;
+    }
+    & span {
+        font-size: 24px;
+        font-weight: 100;
+        line-height: 28px;
+        color: white;
+    }
+}
+.container-dots {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3.4351%;
+    & input {
+        cursor: pointer;
+    }
+    & input[type="radio"] {
+        position: absolute;
+        visibility: hidden;
+        + .radio_label {
+            &:before {
+                content: '';
+                background: inherit;
+                border-radius: 100%;
+                border: 1px solid #8DD83D;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                position: relative;
+                cursor: pointer;
+                text-align: center;
+                margin-right: 10px;
+                transition: all 0.2s ease;
+            }
+        }
+        &:checked {
+            + .radio_label {
+              &:before {
+                background-color: #8DD83D;
+              }
+            }
+          }
+    }
+}
+
+.slider__navigation-buttons {
+    padding-top: 29.75536%;
+    padding-bottom: 32.55%;
+    display: flex;
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
+    @media screen and (max-width: 540px) {
+        padding-top: 15.75536%;
+        padding-bottom: 15.55%;
+    }
+    @media screen and (max-width: 412px) {
+        justify-content: center;
+    }
+    & .navigation-watch {
+        @extend%LinkStyleGreen;
+        padding: 8px 24px 9px 19px;
+        margin: 6.5px;
+    }
+    & .navigation-explore {
+        @extend%LinkStyleGrey;
+        margin: 6.5px;
+        padding: 9px 19px;
+    }
+}
+
+.input_active {
+    width: 125px!important;
+}
+.icon_active {
+    left: 98px!important;
+}
+.navigation_active {
+    opacity: 1!important;
+}
+.navigation__search {
+    @media screen and (min-width:540.1px) {
+        display: none;
+    }
+    padding-top: 23px;
+    text-align: center;
+    position: relative;
+    height: 35px;
+    margin-left: 14px;
+    opacity: 0;
+    transition: all 0.3s linear;
+    & .search-icon {
+        width: 43px;
+        height: 33px;
+        background: inherit;
+        border: none;
+        top: 22px;
+        left: -20px;
+        position: absolute;
+        transition: all 0.3s linear;
+    }
+    & .navigation-input {
+        width: 0;
+        height: 29px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        transition: all 0.3s linear;
+    }
+}
+.search-icon:before {
+    content: url('../icons/1486506270-glass-magnifying-out-search-detective-magnifier-zoom_81489.svg');
+}

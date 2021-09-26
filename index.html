@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="icons/favicon.ico">
+    <title>XBox</title>
+</head>
+<body>
+<header class="header">
+<div class="header__wrapper">
+    <div class="header__container _container">
+        <div class="header__burger">
+            <span></span>
+        </div>
+        <div class="header__main">
+            <a href="http://Xbox.com" class="header__logo" title="XBox" target="_blank"><img src="icons/xbox.svg" alt="Xbox"></a>
+        </div>
+        <div class="header__menu menu">
+            <nav class="menu__body">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <span>Games</span>
+                        <button type="button" class="menu__arrow _icon-arrow-down"></button>
+                        <ul class="menu__sub-list">
+                            <li class="menu__sub-item">
+                                <a href="Games.html" class="menu__sub-link" title="Call of&nbsp;Duty: WWII">Call of&nbsp;Duty: WWII</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a href="Games.html" title="Game #2" class="menu__sub-link">Game #2</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a href="Games.html" title="Game #3" class="menu__sub-link">Game #3</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a href="Games.html" title="Game #4" class="menu__sub-link">Game #4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <span>Consoles</span>
+                        <button type="button" class="menu__arrow _icon-arrow-down"></button>
+                        <ul class="menu__sub-list">
+                            <li class="menu__sub-item">
+                                <a href="https://www.xbox.com/ru-RU/consoles/xbox-one-x" class="menu__sub-link" title="Xbox ONE X" target="_blank">Xbox ONE X</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a href="#" class="menu__sub-link" target="_blank" title="Console #2">Console #2</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a href="#" class="menu__sub-link" target="_blank" title="Console #3">Console #3</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a href="#" class="menu__sub-link" target="_blank" title="Console #4">Console #4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="https://www.xbox.com/en-US/community" title="Community" target="_blank" class="menu__link">Community</a>
+                    </li>
+                </ul>
+                <div class="menu__search">
+                <button type="button" class="menu__search-icon _icon-search"></button>
+                <form action="https://www.google.com/" target="_blank" method="get">
+                <input type="text" placeholder="  Search" name="info" class="menu__search-input ">
+                <button type="submit" name="info" class="_icon-search"></button>
+                </form>
+                </div>
+                <div class="menu__user">
+                    <span>My XBOX</span><button type="button" class="menu__arrow _icon-arrow-down"></button>
+                        <ul class="menu__sub-list">
+                            <li class="menu__sub-item">
+                                <a href="#highlights" title="highlights" class="menu__sub-link">Highlights</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a href="#Games" title="Games" class="menu__sub-link">Games</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a href="#Design" title="Design" class="menu__sub-link">Design</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a href="#Info" title="Info" class="menu__sub-link">Info</a>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
+        </div>
+    <div/>
+</div>
+</header>
+<div class="wrapper__slider">
+    <img class="slide" src="images/Star-Wars-Battlefront-II-combat.svg" alt="Star-Wars-Battlefront">
+    <img class="vsbl"  src="images/slider2.svg" alt="Star-Wars-Battlefront">
+    <img class="vsbl"  src="images/slider3.svg" alt="Star-Wars-Battlefront">
+    <div class="slider-button-prev">
+        <button type="button" class="slider__arrow _icon-arrow-prev"></button>
+    </div>
+        <div class="container-navigation">
+            <h2>Star&nbsp;Wars</h2>
+            <span>Battlefront II</span>
+            <div class="navigation__search">
+                <form action="https://www.google.com/" target="_blank" method="get">
+                <input class="navigation-input" type="text" placeholder="  Search" name="info">
+                <button type="submit" name="info" class="search-icon"></button>
+                </form>
+                </div>
+            <div class="slider__navigation-buttons">
+                <a title="Watch Trailer" target="_blank" href="https://www.youtube.com/watch?v=_q51LZ2HpbE" class="navigation-watch">Watch&nbsp;Trailer</a>
+                <a title="Explore Games" target="_blank" href="https://www.ea.com/ru-ru/games/starwars/battlefront/star-wars-battlefront-2/news/the-beginners-guide" class="navigation-explore">Explore&nbsp;Games</a>
+            </div>
+        </div>
+        <div class="container-dots">
+            <input checked class="radio_input" id="first" type="radio" name="slide"><label class="radio_label" for="first"></label>
+            <input class="radio_input" id="second" type="radio" name="slide"><label class="radio_label" for="second"></label>
+            <input class="radio_input" id="third" type="radio" name="slide"><label class="radio_label" for="third"></label>
+        </div>
+    <div class="slider-button-next"><button data-spoller type="button" class="slider__arrow _icon-arrow-next"></button></div>
+</div>
+<div class="highlights" id="highlights">
+<div class="highlights__container _container">
+    <div class="highlights__title">
+        <div class="title_logo"><svg width="63" height="64" viewBox="0 0 63 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0329 5.4295C14.0148 5.44368 13.999 5.45867 13.9834 5.47354C13.9716 5.48476 13.9599 5.49591 13.9472 5.50661C14.126 5.31509 14.3831 5.10866 14.552 4.99674C19.4835 1.74102 25.1814 0 31.5037 0C37.417 0 42.9558 1.65895 47.684 4.54407C48.0268 4.75051 48.9622 5.40215 49.4446 5.99409V5.99658C44.8828 0.887922 31.4743 11.8489 31.4743 11.8489C26.8366 8.21763 22.5712 5.74289 19.3954 4.86243C16.7411 4.12374 14.9046 4.74056 14.0329 5.4295ZM54.4172 10.0515L54.4171 10.0515L54.4169 10.0512C54.337 9.9674 54.2567 9.88319 54.1801 9.7945C53.0269 8.50863 51.6091 8.19773 50.3309 8.28229C49.1679 8.65288 43.7932 10.6202 37.1697 16.9725C37.1697 16.9725 44.6257 24.337 49.1924 31.8657C53.7519 39.3907 56.4792 45.3056 54.807 53.5121C54.7599 53.2385 54.0071 49.1003 49.9073 43.247C48.9108 41.8293 45.2697 37.4046 43.23 35.0816C41.2075 32.776 38.1981 29.473 34.2241 25.4587C33.3548 24.5808 32.4366 23.6655 31.4718 22.7179C31.4718 22.7179 30.0198 24.1928 28.1295 26.1328V26.1303C25.7103 28.6125 22.5736 31.8508 20.8327 33.741C17.7328 37.1012 8.85169 47.6543 8.35217 53.5713C8.35217 53.5713 6.37615 48.878 10.7126 38.0538C13.5456 30.9778 22.1059 20.3526 25.6809 16.8904C25.6809 16.8904 22.4145 13.2392 18.3155 10.7172L18.291 10.7098C18.291 10.7098 18.2445 10.6725 18.1711 10.6252C16.1999 9.43137 14.0476 8.51112 11.9761 8.38924C9.86051 8.54096 8.52112 10.1129 8.52112 10.1129C3.2346 15.8383 0 23.5337 0 32C0 49.6714 14.1039 64 31.5037 64C40.7373 64 49.0454 59.9559 54.8094 53.5265C54.8094 53.5264 54.8092 53.5252 54.8089 53.5231C54.8087 53.5222 54.8085 53.5211 54.8083 53.5198C59.8967 47.8371 63 40.2877 63 31.9975C63 23.6058 59.8193 15.9677 54.6111 10.2596C54.5482 10.189 54.4828 10.1204 54.4172 10.0515ZM54.8083 53.5198C54.807 53.5212 54.8058 53.5226 54.8045 53.524C54.8054 53.52 54.8062 53.5161 54.807 53.5121C54.8075 53.5152 54.8079 53.5177 54.8083 53.5198Z" fill="white"/>
+            </svg></div>
+        <h1>The best value</h1>
+        <span>in games and entertainment</span>
+    </div>
+    <div class="highlights__cards">
+        <div class="highlights__cards-items">
+            <div class="highlights__cards-images"></div>
+            <span>XBOX ONE X</span>
+            <h2>Faster Processing Smoother&nbsp;Gameplay</h2>
+            <div class="wrapper-link"><a class="button-explore" title="Explore Consoles & Accessories" target="_blank" href="https://www.xbox.com/ru-RU/consoles/xbox-one-x">Explore&nbsp;Consoles&nbsp;&amp;&nbsp;Accessories</a></div>
+        </div>
+        <div class="highlights__cards-items">
+            <div class="highlights__cards-images"><img src="images/mixer-logo.svg" alt="mixer-logo"></div>
+            <span>mixer Streaming</span>
+            <h2>The Next Generation Of&nbsp;Life&nbsp;Game&nbsp;Streaming</h2>
+            <div class="wrapper-link"><a title="Start Watching mixer" target="_blank" href="https://varvid.com/broadcast-platforms/mixer/" class="button-start">Start&nbsp;Watching&nbsp;mixer</a></div>
+        </div>
+        <div class="highlights__cards-items">
+            <div class="highlights__cards-images"><img src="images/1c93fdc8-0f06-4f34-a54c-7ac2a45c58ae.svg" alt="Games with Gold"></div>
+            <span>Free Games Every Month</span>
+            <h2>Get up&nbsp;to&nbsp;$700&nbsp;in free&nbsp;games</h2>
+            <div class="wrapper-link"><a title="Get Free Games" target="_blank" href="https://www.xbox.com/en-US/live/gold" class="button-free">Get&nbsp;Free&nbsp;Games</a></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="games-section__wrapper" id="Games">
+<div class="games-section__title">
+    <span>Exclusive games on&nbsp;XBOX</span>
+    <div class="games-section__button-next"><button data-spoller type="button" class="games-section-arrow"></button></div>
+</div>
+<div class="games-section__cards">
+    <div class="games-section__cards-item">
+        <div class="games-section__cards-images"><img src="images/img-CODWWII.svg" alt="CODWWII" title="CODWWII"></div>
+        <span>Call of&nbsp;Duty: WWII</span>
+        <h2>The C.O.D.E. Bravery Pack is&nbsp;now available in&nbsp;WWII</h2>
+        <div class="wrapper-link"><a title="See Details about The Call of Duty: WWII" class="button-details" href="Games.html">See&nbsp;Details</a></div>
+    </div>
+    <div class="games-section__cards-item">
+        <div class="games-section__cards-images"><img src="images/img-Destiny.svg" alt="Destiny" title="Destiny"></div>
+        <span>Destiny&nbsp;2</span>
+        <div class="wrapper-link"><a title="See Details about The Destiny 2" href="Games.html" class="button-details">See&nbsp;Details</a></div>
+    </div>
+    <div class="games-section__cards-item">
+        <div class="games-section__cards-images"><img src="images/img-STEEP.svg" alt="STEEP" title="STEEP"></div>
+        <span>STEEP</span>
+        <div class="wrapper-link"><a title="See Details about STEEP" href="Games.html" class="button-details">See&nbsp;Details</a></div>
+    </div>
+    <div class="games-section__cards-item">
+        <div class="games-section__cards-images"><img src="images/img-Forza.svg" alt="Forza" title="Forza"></div>
+        <span>Forza Motorsport&nbsp;7</span>
+        <div class="wrapper-link"><a title="See Details about Forza Motorsport 7" href="Games.html" class="button-details">See&nbsp;Details</a></div>
+    </div>
+    <div class="games-section__cards-item">
+        <div class="games-section__cards-images"><img src="images/img-CODWWII.svg" alt="CODWWII" title="CODWWII"></div>
+        <span>Call of&nbsp;Duty: WWII</span>
+        <h2>The C.O.D.E. Bravery Pack is&nbsp;now available in&nbsp;WWII</h2>
+        <div class="wrapper-link"><a title="See Details about The Call of Duty: WWII" class="button-details" href="Games.html">See&nbsp;Details</a></div>
+    </div>
+    <div class="games-section__cards-item">
+        <div class="games-section__cards-images"><img src="images/img-Destiny.svg" alt="Destiny" title="Destiny"></div>
+        <span>Destiny&nbsp;2</span>
+        <div class="wrapper-link"><a title="See Details about The Destiny 2" href="Games.html" class="button-details">See&nbsp;Details</a></div>
+    </div>
+    <div class="games-section__cards-item">
+        <div class="games-section__cards-images"><img src="images/img-STEEP.svg" alt="STEEP" title="STEEP"></div>
+        <span>STEEP</span>
+        <div class="wrapper-link"><a title="See Details about STEEP" href="Games.html" class="button-details">See&nbsp;Details</a></div>
+    </div>
+    <div class="games-section__cards-item">
+        <div class="games-section__cards-images"><img src="images/img-Forza.svg" alt="Forza" title="Forza"></div>
+        <span>Forza Motorsport&nbsp;7</span>
+        <div class="wrapper-link"><a title="See Details about Forza Motorsport 7" href="Games.html" class="button-details">See&nbsp;Details</a></div>
+    </div>
+</div>
+<div class="games-section__button"><a title="XBOX Store" href="https://www.xbox.com/ru-RU/microsoft-store" target="_blank" class="button-games-section">XBOX Store</a></div>
+</div>
+<div class="design-section__wrapper" id="Design">
+    <div class="design-section__container _container">
+        <h1>Xbox Design Lab</h1>
+        <span>Make yours one in&nbsp;a&nbsp;billion with new colors,<br> metallic finishes and rubberized grips.</span>
+        <div class="design-section-buttons">
+            <a title="Design Yours" href ="https://www.microsoft.com/store/configure/xbox-design-lab/900WZDF9XJVG" target="_blank" class="button-design">Design&nbsp;Yours</a>
+            <a title="Explore Consoles &amp;&nbsp;Accessories" href ="https://www.xbox.com/ru-RU/consoles/xbox-one-x" class="button-consoles" target="_blank">Explore&nbsp;Consoles&nbsp;&amp;&nbsp;Accessories</a>
+        </div>
+    </div>
+</div>
+<footer class="footer" id="Info">
+<div class="footer__container _container">
+        <div class="footer__items">
+        <h3>XBOX</h3>
+        <ul class="footer__list-items">
+            <li><a href="#" title="Support" target="_blank">Support</a></li>
+            <li><a href="#" title="Contact us" target="_blank">Contact us</a></li>
+            <li><a href="#" title="Privacy & cookies" target="_blank">Privacy & cookies</a></li>
+            <li><a href="#" title="Terms of use" target="_blank">Terms of use</a></li>
+        </ul>
+        </div>
+        <div class="footer__items">
+        <h3>Developers</h3>
+        <ul class="footer__list-items">
+            <li><a href="#"title="Games" target="_blank">Games</a></li>
+            <li><a href="#"title="Windows 10" target="_blank">Windows 10</a></li>
+            <li><a href="#"title="Creators Program" target="_blank">Creators Program</a></li>
+            <li><a href="#"title="Designed for XBOX" target="_blank">Designed for XBOX</a></li>
+        </ul>
+        </div>
+        <div class="footer__items">
+        <h3>Follow Us</h3>
+        <ul class="footer__social-items">
+            <li><a href="https://facebook.com" target="_blank" title="facebook"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.13988 20V10.8771H10.3831L10.8687 7.3217H7.13988V5.05172C7.13988 4.02235 7.44258 3.32089 9.006 3.32089L11 3.32V0.14008C10.655 0.0968294 9.47145 0 8.09444 0C5.21955 0 3.25144 1.65687 3.25144 4.69971V7.3217H0V10.8771H3.25144V20H7.13988Z" fill="#8DD83D"/></svg></a></li>
+            <li><a href="https://twitter.com" target="_blank" title="twitter"><svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4208 0.332767C19.5876 0.852969 18.6669 1.2313 17.6829 1.43373C16.899 0.551344 15.7787 0 14.5385 0C12.1611 0 10.2317 2.03467 10.2317 4.54397C10.2317 4.90039 10.2687 5.24584 10.3427 5.57861C6.76208 5.38887 3.58794 3.58201 1.46175 0.829323C1.09057 1.50293 0.878621 2.28439 0.878621 3.11659C0.878621 4.69219 1.63893 6.08324 2.79566 6.89814C2.0903 6.87623 1.42475 6.66976 0.842736 6.33181V6.38717C0.842736 8.58966 2.32804 10.4271 4.30059 10.8429C3.9395 10.9496 3.55822 11.0032 3.16517 11.0032C2.88762 11.0032 2.6168 10.9756 2.35439 10.9225C2.90276 12.7271 4.49291 14.0414 6.37855 14.0766C4.90447 15.2958 3.04574 16.0224 1.02777 16.0224C0.680132 16.0224 0.336422 16.0017 0 15.9601C1.90639 17.2474 4.17219 18 6.60452 18C14.5301 18 18.8626 11.0771 18.8626 5.07167C18.8626 4.87386 18.8592 4.67662 18.8519 4.48284C19.6936 3.84211 20.4247 3.0422 21 2.13098C20.2285 2.49201 19.3975 2.73654 18.5262 2.84611C19.416 2.28439 20.0989 1.39393 20.4208 0.332767Z" fill="#8DD83D"/></svg></a></li>
+            <li><a href="https://www.instagram.com" target="_blank" title="instagram"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7415 0H2.25846C1.01107 0 0 1.00848 0 2.25328V16.7467C0 17.991 1.01107 19 2.25846 19H16.7415C17.9889 19 19 17.991 19 16.7467V2.25328C19 1.00848 17.9889 0 16.7415 0ZM13.6565 2.96844C13.6565 2.64092 13.9223 2.37506 14.2499 2.37506H16.031C16.3591 2.37506 16.6249 2.64092 16.6249 2.96844V4.75013C16.6249 5.07765 16.3591 5.34351 16.031 5.34351H14.2499C13.9223 5.34351 13.6565 5.07765 13.6565 4.75013V2.96844ZM9.52203 5.87677C11.54 5.87677 13.1761 7.50921 13.1761 9.52203C13.1761 11.5354 11.54 13.1673 9.52203 13.1673C7.50454 13.1673 5.86848 11.5354 5.86848 9.52203C5.86848 7.50921 7.50454 5.87677 9.52203 5.87677ZM17.2188 16.6249C17.2188 16.9525 16.953 17.2188 16.6249 17.2188H2.37506C2.04702 17.2188 1.78117 16.9525 1.78117 16.6249V7.71857H4.15623C3.84685 8.16373 3.74217 8.99446 3.74217 9.52203C3.74217 12.7014 6.33541 15.2884 9.52203 15.2884C12.7092 15.2884 15.3024 12.7014 15.3024 9.52203C15.3024 8.99446 15.2273 8.17669 14.8438 7.71857H17.2188V16.6249Z" fill="#8DD83D"/></svg></a></li>
+        </ul>
+        </div>
+</div>
+<div class="footer__down">
+    <span>English (United States)</span>
+    <span>&copy;&nbsp;Microsoft 2017</span>
+</div>
+</footer>
+<script src="JS/Skript.js"></script>
+</body>
+</html>

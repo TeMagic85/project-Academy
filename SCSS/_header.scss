@@ -1,0 +1,183 @@
+
+// ._icon-arrow-down
+._icon-arrow-down:after {
+    content: url('../icons/down-arrow.svg');
+}
+.menu__search-icon {
+    display: none;
+}
+._icon-search::before {
+    content: url('../icons/search_find_magnify_icon_131253.svg');
+}
+._icon-search {
+    display: block;
+    position: absolute;
+    right: -1px;
+    top: 3px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.menu__sub-list {
+    position: absolute;
+    width: 150%;
+    padding: 15px;
+    background-color: #373A3C;
+    transform: translate(0px, 15px);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 4px;
+    transition: all 0.3s ease 0s;
+    & li {
+        text-align: center;
+    }
+    & li:not(:last-child) {
+        margin-bottom: 14px;
+    }
+}
+.header {
+    // .header__wrapper
+    &__wrapper {
+        background-color: #373A3C;
+        border-bottom: solid 3px #979797;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+}
+    // .header__container
+    &__container {
+        padding-left: 15px;
+        padding-right: 15px;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    // .header__logo
+    &__logo {
+        width: 96px;
+        & img {
+            transition: transform 0.2s linear;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    // .header__menu
+    &__menu {
+        width: 981/1077*100%;
+    }
+}
+.menu {
+    // .menu__body
+    &__body {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        align-items: center;
+    }
+    // .menu__list
+    &__list {
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin: 0;
+        & span {
+            color: #979797;
+            cursor: pointer;
+        }
+    }
+    // .menu__item
+    &__item {
+        position: relative;
+        transition: all 0.3s ease 0s;
+        &:hover span {
+            color: white;
+        }
+        &:hover .menu__sub-list {
+            transform: translate(0px, 0px);
+            opacity: 1;
+            visibility: visible;
+        }
+        &:hover ._icon-arrow-down {
+            transform: rotate(180deg);
+        }
+        & a:hover {
+            color: white;
+        }
+    }
+    &__item:not(:last-child) {
+        padding-left: 24/589*100%;
+    }
+    &__item:last-child {
+        padding-left: 28/589*100%;
+    }
+    // .menu__arrow
+    &__arrow {
+        padding: 0;
+        padding-left: 5px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: transform 0.3s ease 0s;
+    }
+    // .menu__search
+    &__search {
+        position: relative;
+        padding-left: 37/981*100%;
+        & input {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 21px;
+            width: 209.8px;
+            height: 38px;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+        }
+    }
+    // .menu__user
+    &__user {
+        padding-left: 29/981*100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:before {
+            content: url('../icons/user.svg');
+            padding-right: 5px;
+        }
+        & a:hover {
+            color: white;
+        }
+        & ul {
+            top: 9px;
+            left: 16px;
+            width: auto;
+        }
+        &:hover span {
+            color: white;
+        }
+        &:hover .menu__sub-list {
+            transform: translate(0px, 0px);
+            opacity: 1;
+            visibility: visible;
+        }
+        &:hover ._icon-arrow-down {
+            transform: rotate(180deg);
+        }
+        & span {
+            width: 70px;
+            font-size: 16px;
+            line-height: 16px;
+            color: #FFFFFF80;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.highlights {
+  background: radial-gradient(100% 100% at 50% 0%, #686C6F 0%, #373A3C 100%);
+    // .highlights__container
+    &__container {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    // .highlights__title
+    &__title {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h1 {
+            margin-top: 16px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        & span {
+            font-size: 36px;
+            line-height: 42px;
+            color: white;
+            margin: 0;
+            font-weight: 100;
+            text-align: center;
+        }
+    }
+    // .highlights__cards
+    &__cards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 15.33%;
+        @media screen and (max-width:1023.98px) {
+            flex-direction: column;
+        }
+    }
+    // .highlights__cards-items
+    &__cards-items {
+        @extend%CardsItemsStyle;
+        & h2 {
+            font-size: 24px;
+            line-height: 28px;
+            margin-top: 13px;
+        }
+        & .button-explore {
+            padding: 20px 23px;
+            @extend%LinkStyleGreen;
+        }
+        & .button-start {
+            padding: 20px 64px;
+            @extend%LinkStyleGreen;
+        }
+        & .button-free {
+            padding: 20px 80px;
+            @extend%LinkStyleGreen;
+        }
+    }
+    // .highlights__cards-images
+    &__cards-images {
+        @extend%CardsImagesStyle;
+    }
+}
+.highlights__cards-items:nth-of-type(1)
+.highlights__cards-images {
+    background-image: url('../images/xbox-one-x.svg');
+    background-position: center;
+}
+.wrapper-link {
+    padding-top: 38px;
+    padding-bottom: 47px;
+    align-self: center;
+}
+.title_logo {
+    margin-top: 64px;
+}

@@ -1,0 +1,98 @@
+.games-section {
+    // .games-section__wrapper
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        background: url('../images/Rectangle.svg') no-repeat, rgba(23, 23, 23, 0.5);
+        background-blend-mode: overlay;
+        background-position: center;
+        background-size: cover;
+    }
+    // .games-section__title
+    &__title {
+        grid-column: 1;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 6.933%;
+        & span {
+            font-size: 36px;
+            font-weight: 100;
+            line-height: 42px;
+            color: white;
+            width: 90%;
+            text-align: center;
+        }
+    }
+    // .games-section__button-next
+    &__button-next {
+        grid-column: 1;
+        grid-row: 1/2;
+    }
+    // .games-section__cards
+    &__cards {
+        position: relative;
+        grid-column: 1;
+        grid-row: 2/3;
+        display: flex;
+        overflow: hidden;
+        padding-top: 3.5%;
+        padding-bottom: 25px;
+        > .games-section__cards-item:nth-of-type(2),
+        .games-section__cards-item:nth-of-type(3),
+        .games-section__cards-item:nth-of-type(4),
+        .games-section__cards-item:nth-of-type(6),
+        .games-section__cards-item:nth-of-type(7),
+        .games-section__cards-item:nth-of-type(8) {
+           .wrapper-link {
+               padding-top: 127px;
+           }
+        }
+    }
+    // .games-section__cards-item
+    &__cards-item {
+        @extend%CardsItemsStyle;
+        margin-left: 14.5px;
+        margin-right: 14.5px;
+        transition: all 0.2s ease;
+        &:hover {
+            transform: scale(1.09);
+        }
+        & h2 {
+            font-size: 21px;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+    }
+    // .games-section__cards-images
+    &__cards-images {
+        @extend%CardsImagesStyle;
+        overflow: hidden;
+    }
+    // .games-section__button
+    &__button {
+        grid-column: 1;
+        grid-row: 3/4;
+        text-align: center;
+        margin-top: 4.75%;
+        margin-bottom: 11.48662%;
+        & .button-games-section {
+            padding: 11px 47px 21px 47px;
+            @extend%LinkStyleGrey;
+        }
+    }
+}
+.games-section-arrow {
+    &:after {
+        content: url('../icons/icon-next1.svg');
+    }
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+.button-details {
+    padding: 20px 98px;
+    @extend%LinkStyleGreen;
+}

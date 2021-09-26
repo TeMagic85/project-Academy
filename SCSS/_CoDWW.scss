@@ -1,0 +1,64 @@
+.wrapper {
+    // .wrapper__codww
+    &__codww {
+        display: grid;
+        grid-template-columns: auto 2fr 1fr auto;
+        grid-template-rows: 1fr auto;
+        padding-top: 63px;
+        background: url('../images/CoDWW/CoD-WWII.svg') no-repeat, #777777;
+        background-size: cover;
+        background-blend-mode: normal;
+        background-position: 0 56px;
+        opacity: 0.85;
+        @media screen and(max-width:871px) {
+            background-position: -325px 56px;
+        }
+    }
+    // .wrapper__navigation
+    &__navigation {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-right: 30px;
+    & h2 {
+        font-size: 36px;
+        font-weight: 100;
+        line-height: 42px;
+        color: white;
+        margin: 0;
+        padding-top: 109px;
+        padding-bottom: 0;
+    }
+    & span {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 16px;
+        color: white;
+    }
+    }
+    // .wrapper__navigation-buttons
+    &__navigation-buttons {
+        padding-top: 139/365*100%;
+        padding-bottom: 204/607*100%;
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and(max-width:928px) {
+            padding-top: 113px;
+            padding-bottom: 130px;
+        }
+        @media screen and(max-width:647px) {
+            padding-top: 90px;
+            padding-bottom: 110px;
+        }
+        & .navigation-order {
+            @extend%LinkStyleGreen;
+            padding: 9px 29px;
+            margin-right: 13px;
+            margin-bottom: 13px;
+        }
+        & .navigation-more {
+            @extend%LinkStyleGreen;
+            padding: 8px 29px 9px 22px;
+            margin-bottom: 13px;
+        }
+    }
+}
