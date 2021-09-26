@@ -1,18 +1,16 @@
 let menu = document.querySelector('.menu__list');
 let burger = document.querySelector('.header__burger');
-    burger.addEventListener('click', function() {
-        burger.classList.toggle('burger_active');
-        menu.classList.toggle('active');
-});
-
 let navi = document.querySelector('.navigation__search');
 let Elinput = document.querySelector('.navigation-input');
 let Elbutton = document.querySelector('.search-icon');
     burger.addEventListener('click', function() {
+        burger.classList.toggle('burger_active');
+        menu.classList.toggle('active');
         navi.classList.toggle('navigation_active');
         Elinput.classList.toggle('input_active');
         Elbutton.classList.toggle('icon_active');
 });
+
 
 let images = document.querySelectorAll('.wrapper__slider img');
 let inptCheck =document.querySelector('container-dots input');
@@ -28,7 +26,7 @@ function slider() {
     inptCheck[current].checked = true;
 };
 
-document.querySelector('.slider-button-next').onclick = function () {
+document.querySelector('.slider-button-next .slider__arrow').onclick = function () {
     if (current+1 == images.length) {
         current=0;
     }
@@ -37,7 +35,7 @@ document.querySelector('.slider-button-next').onclick = function () {
     }
     slider();
 };
-document.querySelector('.slider-button-prev').onclick = function () {
+document.querySelector('.slider-button-prev .slider__arrow').onclick = function () {
     if (current-1 == -1) {
         current = images.length -1;
     }

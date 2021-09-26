@@ -76,4 +76,23 @@
 }
 .title_logo {
     margin-top: 64px;
+    & svg {
+        background: rgb(119,119,119);
+        border-radius: 50px;
+        animation: shine 1s linear 0s infinite;
+    }
 }
+@keyframes shine {
+    0%{background: linear-gradient(180deg, rgba(119,119,119,1) 90%, rgba(0,218,60,1) 100%, rgba(119,119,119,1) 100%);}
+    10%{background: linear-gradient(180deg, rgba(119,119,119,1) 80%, rgba(0,218,60,1) 90%, rgba(119,119,119,1) 100%);}
+    20%{background: linear-gradient(180deg, rgba(119,119,119,1) 70%, rgba(0,218,60,1) 80%, rgba(119,119,119,1) 90%);}
+    30%{background: linear-gradient(180deg, rgba(119,119,119,1) 60%, rgba(0,218,60,1) 70%, rgba(119,119,119,1) 80%);}
+    40%{background: linear-gradient(180deg, rgba(119,119,119,1) 50%, rgba(0,218,60,1) 60%, rgba(119,119,119,1) 70%);}
+    50%{background: linear-gradient(180deg, rgba(119,119,119,1) 40%, rgba(0,218,60,1) 50%, rgba(119,119,119,1) 60%);}
+    60%{background: linear-gradient(180deg, rgba(119,119,119,1) 30%, rgba(0,218,60,1) 40%, rgba(119,119,119,1) 50%);}
+    70%{background: linear-gradient(180deg, rgba(119,119,119,1) 20%, rgba(0,218,60,1) 30%, rgba(119,119,119,1) 40%);}
+    80%{background: linear-gradient(180deg, rgba(119,119,119,1) 10%, rgba(0,218,60,1) 20%, rgba(119,119,119,1) 30%);}
+    90%{background: linear-gradient(180deg, rgba(119,119,119,1) 0%, rgba(0,218,60,1) 10%, rgba(119,119,119,1) 20%);}
+    100%{background: linear-gradient(180deg, rgba(119,119,119,1) 0%, rgba(0,218,60,1) 0%, rgba(119,119,119,1) 10%);}
+  }
+

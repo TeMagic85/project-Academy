@@ -9,31 +9,24 @@
     }
 }
 .slide {
-    display: block;
-    opacity: 1;
     grid-column: 1/5;
     grid-row: 1/3;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: all 0.3s linear;
 }
 .vsbl {
     display: none;
-    opacity: 0;
-    transition: all 0.3s linear;
 }
 .-active {
     display: block;
-    opacity: 1;
     grid-column: 1/5;
     grid-row: 1/3;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: all 0.3s linear;
 }
 ._icon-arrow-prev:before {
     content: url('../icons/icon-prev.svg');
@@ -54,12 +47,13 @@
 .slider__arrow {
     background: inherit;
     border: none;
+    height: 40px;
 }
 
 .slider-button-prev,
 .slider-button-next {
     display: grid;
-    text-align: center;
+    align-items: center;
 }
 .slider-button-prev {
     grid-column: 1/2;

@@ -435,6 +435,107 @@
   margin-top: 64px;
 }
 
+.title_logo svg {
+  background: #777777;
+  border-radius: 50px;
+  -webkit-animation: shine 1s linear 0s infinite;
+          animation: shine 1s linear 0s infinite;
+}
+
+@-webkit-keyframes shine {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #777777), color-stop(100%, #00da3c), to(#777777));
+    background: linear-gradient(180deg, #777777 90%, #00da3c 100%, #777777 100%);
+  }
+  10% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #777777), color-stop(90%, #00da3c), to(#777777));
+    background: linear-gradient(180deg, #777777 80%, #00da3c 90%, #777777 100%);
+  }
+  20% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #777777), color-stop(80%, #00da3c), color-stop(90%, #777777));
+    background: linear-gradient(180deg, #777777 70%, #00da3c 80%, #777777 90%);
+  }
+  30% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #777777), color-stop(70%, #00da3c), color-stop(80%, #777777));
+    background: linear-gradient(180deg, #777777 60%, #00da3c 70%, #777777 80%);
+  }
+  40% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #777777), color-stop(60%, #00da3c), color-stop(70%, #777777));
+    background: linear-gradient(180deg, #777777 50%, #00da3c 60%, #777777 70%);
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #777777), color-stop(50%, #00da3c), color-stop(60%, #777777));
+    background: linear-gradient(180deg, #777777 40%, #00da3c 50%, #777777 60%);
+  }
+  60% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #777777), color-stop(40%, #00da3c), color-stop(50%, #777777));
+    background: linear-gradient(180deg, #777777 30%, #00da3c 40%, #777777 50%);
+  }
+  70% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #777777), color-stop(30%, #00da3c), color-stop(40%, #777777));
+    background: linear-gradient(180deg, #777777 20%, #00da3c 30%, #777777 40%);
+  }
+  80% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #777777), color-stop(20%, #00da3c), color-stop(30%, #777777));
+    background: linear-gradient(180deg, #777777 10%, #00da3c 20%, #777777 30%);
+  }
+  90% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#777777), color-stop(10%, #00da3c), color-stop(20%, #777777));
+    background: linear-gradient(180deg, #777777 0%, #00da3c 10%, #777777 20%);
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#777777), color-stop(0%, #00da3c), color-stop(10%, #777777));
+    background: linear-gradient(180deg, #777777 0%, #00da3c 0%, #777777 10%);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #777777), color-stop(100%, #00da3c), to(#777777));
+    background: linear-gradient(180deg, #777777 90%, #00da3c 100%, #777777 100%);
+  }
+  10% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #777777), color-stop(90%, #00da3c), to(#777777));
+    background: linear-gradient(180deg, #777777 80%, #00da3c 90%, #777777 100%);
+  }
+  20% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #777777), color-stop(80%, #00da3c), color-stop(90%, #777777));
+    background: linear-gradient(180deg, #777777 70%, #00da3c 80%, #777777 90%);
+  }
+  30% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #777777), color-stop(70%, #00da3c), color-stop(80%, #777777));
+    background: linear-gradient(180deg, #777777 60%, #00da3c 70%, #777777 80%);
+  }
+  40% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #777777), color-stop(60%, #00da3c), color-stop(70%, #777777));
+    background: linear-gradient(180deg, #777777 50%, #00da3c 60%, #777777 70%);
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #777777), color-stop(50%, #00da3c), color-stop(60%, #777777));
+    background: linear-gradient(180deg, #777777 40%, #00da3c 50%, #777777 60%);
+  }
+  60% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #777777), color-stop(40%, #00da3c), color-stop(50%, #777777));
+    background: linear-gradient(180deg, #777777 30%, #00da3c 40%, #777777 50%);
+  }
+  70% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #777777), color-stop(30%, #00da3c), color-stop(40%, #777777));
+    background: linear-gradient(180deg, #777777 20%, #00da3c 30%, #777777 40%);
+  }
+  80% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #777777), color-stop(20%, #00da3c), color-stop(30%, #777777));
+    background: linear-gradient(180deg, #777777 10%, #00da3c 20%, #777777 30%);
+  }
+  90% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#777777), color-stop(10%, #00da3c), color-stop(20%, #777777));
+    background: linear-gradient(180deg, #777777 0%, #00da3c 10%, #777777 20%);
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#777777), color-stop(0%, #00da3c), color-stop(10%, #777777));
+    background: linear-gradient(180deg, #777777 0%, #00da3c 0%, #777777 10%);
+  }
+}
+
 @media screen and (max-width: 768px) {
   ._icon-search {
     display: block;
@@ -504,8 +605,6 @@
 }
 
 .slide {
-  display: block;
-  opacity: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
@@ -518,20 +617,14 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
 
 .vsbl {
   display: none;
-  opacity: 0;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
 
 .-active {
   display: block;
-  opacity: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
@@ -544,8 +637,6 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
 
 ._icon-arrow-prev:before {
@@ -575,13 +666,16 @@
 .slider__arrow {
   background: inherit;
   border: none;
+  height: 40px;
 }
 
 .slider-button-prev,
 .slider-button-next {
   display: -ms-grid;
   display: grid;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .slider-button-prev {
