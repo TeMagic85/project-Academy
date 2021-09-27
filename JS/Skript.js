@@ -25,31 +25,6 @@ function slider() {
 };
 
 
-function input () {
-    for (let i=0; i<inptCheck.length; i++) {
-        inptCheck[i].removeAttribute("checked");
-    }
-    inptCheck[current].setAttribute("checked", "true");
-};
-document.querySelector('.slider-button-next .slider__arrow').onclick = function () {
-    if (current+1 == inptCheck.length) {
-        current=0;
-    }
-    else {
-        current++;
-    }
-    input();
-};
-document.querySelector('.slider-button-prev .slider__arrow').onclick = function () {
-    if (current-1 == -1) {
-        current = inptCheck.length -1;
-    }
-    else {
-        current--;
-    }
-    input();
-};
-
 document.querySelector('.slider-button-next .slider__arrow').onclick = function () {
     if (current+1 == images.length) {
         current=0;

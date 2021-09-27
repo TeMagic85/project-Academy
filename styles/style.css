@@ -1050,6 +1050,8 @@
   overflow: hidden;
   padding-top: 3.5%;
   padding-bottom: 25px;
+  -webkit-transition: all 0.3s linear 0.1s;
+  transition: all 0.3s linear 0.1s;
 }
 
 .games-section__cards > .games-section__cards-item:nth-of-type(2) .wrapper-link,
