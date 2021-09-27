@@ -13,17 +13,41 @@ let Elbutton = document.querySelector('.search-icon');
 
 
 let images = document.querySelectorAll('.wrapper__slider img');
-let inptCheck =document.querySelector('container-dots input');
+let inptCheck =document.getElementsByClassName('radio_input');
 let current = 0;
 function slider() {
     for (let i=0; i<images.length; i++) {
         images[i].classList.remove('-active');
+        inptCheck[i].removeAttribute("checked");
     }
     images[current].classList.add('-active');
+    inptCheck[current].setAttribute("checked", "true");
+};
+
+
+function input () {
     for (let i=0; i<inptCheck.length; i++) {
-        inptCheck[i].checked = false;
+        inptCheck[i].removeAttribute("checked");
     }
-    inptCheck[current].checked = true;
+    inptCheck[current].setAttribute("checked", "true");
+};
+document.querySelector('.slider-button-next .slider__arrow').onclick = function () {
+    if (current+1 == inptCheck.length) {
+        current=0;
+    }
+    else {
+        current++;
+    }
+    input();
+};
+document.querySelector('.slider-button-prev .slider__arrow').onclick = function () {
+    if (current-1 == -1) {
+        current = inptCheck.length -1;
+    }
+    else {
+        current--;
+    }
+    input();
 };
 
 document.querySelector('.slider-button-next .slider__arrow').onclick = function () {
@@ -44,7 +68,6 @@ document.querySelector('.slider-button-prev .slider__arrow').onclick = function 
     }
     slider();
 };
-
 
 let offset =0;
 const line = document.querySelector('.games-section__cards');
