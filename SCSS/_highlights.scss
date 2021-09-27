@@ -79,20 +79,33 @@
     & svg {
         background: rgb(119,119,119);
         border-radius: 50px;
-        animation: shine 1s linear 0s infinite;
+        animation: shine 5s linear infinite, shad 5s linear infinite;
     }
 }
 @keyframes shine {
-    0%{background: linear-gradient(180deg, rgba(119,119,119,1) 90%, rgba(0,218,60,1) 100%, rgba(119,119,119,1) 100%);}
-    10%{background: linear-gradient(180deg, rgba(119,119,119,1) 80%, rgba(0,218,60,1) 90%, rgba(119,119,119,1) 100%);}
-    20%{background: linear-gradient(180deg, rgba(119,119,119,1) 70%, rgba(0,218,60,1) 80%, rgba(119,119,119,1) 90%);}
-    30%{background: linear-gradient(180deg, rgba(119,119,119,1) 60%, rgba(0,218,60,1) 70%, rgba(119,119,119,1) 80%);}
-    40%{background: linear-gradient(180deg, rgba(119,119,119,1) 50%, rgba(0,218,60,1) 60%, rgba(119,119,119,1) 70%);}
-    50%{background: linear-gradient(180deg, rgba(119,119,119,1) 40%, rgba(0,218,60,1) 50%, rgba(119,119,119,1) 60%);}
-    60%{background: linear-gradient(180deg, rgba(119,119,119,1) 30%, rgba(0,218,60,1) 40%, rgba(119,119,119,1) 50%);}
-    70%{background: linear-gradient(180deg, rgba(119,119,119,1) 20%, rgba(0,218,60,1) 30%, rgba(119,119,119,1) 40%);}
-    80%{background: linear-gradient(180deg, rgba(119,119,119,1) 10%, rgba(0,218,60,1) 20%, rgba(119,119,119,1) 30%);}
-    90%{background: linear-gradient(180deg, rgba(119,119,119,1) 0%, rgba(0,218,60,1) 10%, rgba(119,119,119,1) 20%);}
-    100%{background: linear-gradient(180deg, rgba(119,119,119,1) 0%, rgba(0,218,60,1) 0%, rgba(119,119,119,1) 10%);}
+    0%{background: linear-gradient(180deg, rgb(104,108,111) 90%, rgba(0,218,60,1) 100%, rgb(104,108,111) 100%);}
+    2%{background: linear-gradient(180deg, rgb(104,108,111) 80%, rgba(0,218,60,1) 90%, rgb(104,108,111) 100%);}
+    4%{background: linear-gradient(180deg, rgb(104,108,111) 70%, rgba(0,218,60,1) 80%, rgb(104,108,111) 90%);}
+    6%{background: linear-gradient(180deg, rgb(104,108,111) 60%, rgba(0,218,60,1) 70%, rgb(104,108,111) 80%);}
+    8%{background: linear-gradient(180deg, rgb(104,108,111) 50%, rgba(0,218,60,1) 60%, rgb(104,108,111) 70%);}
+    10%{background: linear-gradient(180deg, rgb(104,108,111) 40%, rgba(0,218,60,1) 50%, rgb(104,108,111) 60%);}
+    12%{background: linear-gradient(180deg, rgb(104,108,111) 30%, rgba(0,218,60,1) 40%, rgb(104,108,111) 50%);}
+    14%{background: linear-gradient(180deg, rgb(104,108,111) 20%, rgba(0,218,60,1) 30%, rgb(104,108,111) 40%);}
+    16%{background: linear-gradient(180deg, rgb(104,108,111) 10%, rgba(0,218,60,1) 20%, rgb(104,108,111) 30%);}
+    18%{background: linear-gradient(180deg, rgb(104,108,111) 0%, rgba(0,218,60,1) 10%, rgb(104,108,111) 20%);}
+    20%{background: linear-gradient(180deg, rgb(104,108,111) 0%, rgba(0,218,60,1) 0%, rgb(104,108,111) 10%);}
+  21%{background: none;}
+  100%{background: none;}
+  }
+  @keyframes shad {
+    0% {box-shadow: 0px 7px 10px -3px rgba(0, 218, 60, 0.85); }
+    4% {box-shadow: -3px 6px 10px -3px rgba(0, 218, 60, 0.85), 4px 6px 10px -3px rgba(0, 218, 60, 0.85);}
+    8% {box-shadow: -6px 3px 10px -3px rgba(0, 218, 60, 0.85), 6px 3px 10px -3px rgba(0, 218, 60, 0.85);}
+    10% {box-shadow: -7px 0px 10px -3px rgba(0, 218, 60, 0.85), 7px 0px 10px -3px rgba(0, 218, 60, 0.85);}
+    12% {box-shadow: -6px -4px 10px -3px rgba(0, 218, 60, 0.85), 6px -4px 10px -3px rgba(0, 218, 60, 0.85);}
+    16% {box-shadow: -4px -6px 10px -3px rgba(0, 218, 60, 0.85), 4px -6px 10px -3px rgba(0, 218, 60, 0.85);}
+    20% {box-shadow: 0px -7px 10px -3px rgba(0, 218, 60, 0.85);}
+    21%{box-shadow: 0}
+    100%{box-shadow: 0}
   }
 
