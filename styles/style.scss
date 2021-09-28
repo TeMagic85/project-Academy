@@ -31,9 +31,10 @@ $maxWidthContainer: 1077px;
     line-height: 21px;
     border-radius: 4px;
     background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
-    transition: background 0.3s linear;
+    transition: all 0.3s linear;
     &:hover {
-        background: #8DD83D;
+        background: linear-gradient(180deg, #8DD83D 0%, #8DD83D 100%);
+        transition: all 0.3s linear;
     }
 }
 %LinkStyleGreen {
@@ -42,10 +43,11 @@ $maxWidthContainer: 1077px;
     font-size: 1em;
     line-height: 21px;
     border-radius: 4px;
-    background: #8DD83D;
-    transition: background 0.3s linear;
+    background: linear-gradient(180deg, #8DD83D 0%, #8DD83D 100%);
+    transition: all 0.3s linear;
     &:hover {
         background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+        transition: all 0.3s linear;
 }
 }
 %CardsItemsStyle {

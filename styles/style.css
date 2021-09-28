@@ -691,30 +691,35 @@
   -ms-grid-rows: 1fr auto;
       grid-template-rows: 1fr auto;
   padding-top: 63px;
+}
+
+.slider {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  position: relative;
+  z-index: -1;
   background: #777777;
 }
 
-.slide {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1/5;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
+.vsbl {
+  position: absolute;
+  opacity: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-}
-
-.vsbl {
-  display: none;
+  -webkit-transition: all 0.9s linear;
+  transition: all 0.9s linear;
 }
 
 .-active {
-  display: block;
+  opacity: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
@@ -723,10 +728,6 @@
   grid-row: 1/3;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 
 ._icon-arrow-prev:before {
@@ -1617,12 +1618,15 @@
   border-radius: 4px;
   background: -webkit-gradient(linear, left top, left bottom, from(#686C6F), to(#373A3C));
   background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
-  -webkit-transition: background 0.3s linear;
-  transition: background 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .slider__navigation-buttons .navigation-explore:hover, .games-section__button .button-games-section:hover, .button-design:hover, .information-title-buttons .specifications:hover, .information-technical-buttons .technical-xbox:hover {
-  background: #8DD83D;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8DD83D), to(#8DD83D));
+  background: linear-gradient(180deg, #8DD83D 0%, #8DD83D 100%);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .highlights__cards-items .button-explore, .highlights__cards-items .button-start, .highlights__cards-items .button-free, .slider__navigation-buttons .navigation-watch, .button-details, .button-consoles, .wrapper__navigation-buttons .navigation-order, .wrapper__navigation-buttons .navigation-more, .information-title-buttons .order, .information-technical-buttons .technical-mixer {
@@ -1631,14 +1635,17 @@
   font-size: 1em;
   line-height: 21px;
   border-radius: 4px;
-  background: #8DD83D;
-  -webkit-transition: background 0.3s linear;
-  transition: background 0.3s linear;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8DD83D), to(#8DD83D));
+  background: linear-gradient(180deg, #8DD83D 0%, #8DD83D 100%);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .highlights__cards-items .button-explore:hover, .highlights__cards-items .button-start:hover, .highlights__cards-items .button-free:hover, .slider__navigation-buttons .navigation-watch:hover, .button-details:hover, .button-consoles:hover, .wrapper__navigation-buttons .navigation-order:hover, .wrapper__navigation-buttons .navigation-more:hover, .information-title-buttons .order:hover, .information-technical-buttons .technical-mixer:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#686C6F), to(#373A3C));
   background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .highlights__cards-items, .games-section__cards-item {
