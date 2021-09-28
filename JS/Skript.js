@@ -46,10 +46,9 @@ document.querySelector('.slider-button-prev .slider__arrow').onclick = function 
 
 let offset =0;
 const line = document.querySelector('.games-section__cards');
-
 document.querySelector('.games-section-arrow').addEventListener('click', function() {
-    offset = offset +347;
-    if (offset > 2776) {
+    offset = offset +320;
+    if (offset > 2560) {
         offset = 0;
     }
     line.style.left = -offset + 'px';
