@@ -1070,6 +1070,13 @@
   transition: all 0.2s ease;
 }
 
+@media screen and (width: 540px) {
+  .games-section__cards-item {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
 @media screen and (max-width: 341px) {
   .games-section__cards-item {
     margin-left: 2.5px;

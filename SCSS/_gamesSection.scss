@@ -57,6 +57,10 @@
         margin-left: 14.5px;
         margin-right: 14.5px;
         transition: all 0.2s ease;
+        @media screen and (width: 540px) {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
         @media screen and (max-width: 341px) {
             margin-left: 2.5px;
             margin-right: 2.5px;
