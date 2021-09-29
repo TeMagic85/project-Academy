@@ -24,19 +24,23 @@ function slider() {
     inptCheck[current].setAttribute("checked", "true");
 };
 
+
 let first =document.getElementById('first');
 let second =document.getElementById('second');
 let third =document.getElementById('third');
 first.addEventListener('click', function() {
-    images[1,2].classList.remove('-active');
+    images[1].classList.remove('-active');
+    images[2].classList.remove('-active');
     images[0].classList.add('-active');
 });
 second.addEventListener('click', function() {
-    images[0,2].classList.remove('-active');
+    images[0].classList.remove('-active');
+    images[2].classList.remove('-active');
     images[1].classList.add('-active');
 });
 third.addEventListener('click', function() {
-    images[0,1].classList.remove('-active');
+    images[0].classList.remove('-active');
+    images[1].classList.remove('-active');
     images[2].classList.add('-active');
 });
 
@@ -60,6 +64,7 @@ document.querySelector('.slider-button-prev .slider__arrow').onclick = function 
     slider();
 };
 
+
 let offset =0;
 const line = document.querySelector('.games-section__cards');
 const availableScreenWidth = document.documentElement.clientWidth;
@@ -70,3 +75,8 @@ document.querySelector('.games-section-arrow').addEventListener('click', functio
     };
     line.style.left = -offset + 'px';
 });
+
+function list (menu) {
+let parentMenu = menu.parentNode;
+parentMenu.classList.toggle('-down');
+}
