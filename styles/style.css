@@ -481,6 +481,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 15.33%;
+  padding-top: 4.25532%;
 }
 
 @media screen and (max-width: 1023.98px) {
@@ -515,7 +516,7 @@
 }
 
 .highlights__cards-items:nth-of-type(1) .highlights__cards-images {
-  background-image: url("../images/xbox-one-x.svg");
+  background-image: url("../images/xbox-one-x.jpg");
   background-position: center;
 }
 
@@ -1093,7 +1094,7 @@
       grid-template-columns: 1fr;
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
-  background: url("../images/Rectangle.svg") no-repeat, rgba(23, 23, 23, 0.5);
+  background: url("../images/Rectangle.jpg") no-repeat, rgba(23, 23, 23, 0.5);
   background-blend-mode: overlay;
   background-position: center;
   background-size: cover;
@@ -1247,7 +1248,7 @@
 }
 
 .design-section__wrapper {
-  background: url("../images/RectangleXbox.svg") no-repeat, radial-gradient(100% 100% at 50% 0%, rgba(193, 255, 127, 0.1) 0%, rgba(141, 216, 61, 0.1) 100%);
+  background: url("../images/Rectangle1.jpg") no-repeat, radial-gradient(100% 100% at 50% 0%, rgba(193, 255, 127, 0.1) 0%, rgba(141, 216, 61, 0.1) 100%);
   background-blend-mode: overlay;
   background-position: center;
   background-size: cover;
@@ -1316,7 +1317,7 @@
   -ms-grid-rows: 1fr auto;
       grid-template-rows: 1fr auto;
   padding-top: 63px;
-  background: url("../images/CoDWW/CoD-WWII.svg") no-repeat, #777777;
+  background: url("../images/CoD-WWII.jpg") no-repeat, #777777;
   background-size: cover;
   background-blend-mode: normal;
   background-position: 0 56px;
