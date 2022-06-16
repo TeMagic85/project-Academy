@@ -1,69 +1,57 @@
-let menu = document.querySelector('.menu__list');
-let burger = document.querySelector('.header__burger');
-let navi = document.querySelector('.navigation__search');
-let Elinput = document.querySelector('.navigation-input');
-let Elbutton = document.querySelector('.search-icon');
+const menu = document.querySelector('.menu__list');
+const burger = document.querySelector('.header__burger');
     burger.addEventListener('click', function() {
         burger.classList.toggle('burger_active');
         menu.classList.toggle('active');
-        navi.classList.toggle('navigation_active');
-        Elinput.classList.toggle('input_active');
-        Elbutton.classList.toggle('icon_active');
 });
 
+const btnNext = document.querySelector('.slider-button-next .slider__arrow');
+const btnPrev = document.querySelector('.slider-button-prev .slider__arrow');
+const imagesArr = document.querySelectorAll('.vsbl');
+const inputs = document.querySelectorAll('.radio_input');
+const containerDots = document.querySelector('.container-dots');
+const arrImages = [];
+const arrInputs = [];
+for (let i=0; i<imagesArr.length; i++) {
+    arrImages.push(imagesArr[i]);
+    arrInputs.push(inputs[i]);
+}
 
-let images = document.querySelectorAll('.wrapper__slider img');
-let inptCheck =document.getElementsByClassName('radio_input');
-let current = 0;
-function slider() {
-    for (let i=0; i<images.length; i++) {
-        images[i].classList.remove('-active');
-        inptCheck[i].removeAttribute("checked");
-    }
-    images[current].classList.add('-active');
-    inptCheck[current].setAttribute("checked", "true");
-};
-
-
-let first =document.getElementById('first');
-let second =document.getElementById('second');
-let third =document.getElementById('third');
-first.addEventListener('click', function() {
-    images[1].classList.remove('-active');
-    images[2].classList.remove('-active');
-    images[0].classList.add('-active');
-});
-second.addEventListener('click', function() {
-    images[0].classList.remove('-active');
-    images[2].classList.remove('-active');
-    images[1].classList.add('-active');
-});
-third.addEventListener('click', function() {
-    images[0].classList.remove('-active');
-    images[1].classList.remove('-active');
-    images[2].classList.add('-active');
+btnNext.addEventListener('click', ()=>{
+    let firstImage = document.querySelector('.slider img');
+    let image = document.querySelector('.-active');
+    image.nextElementSibling ? image.nextElementSibling.classList.add('-active') : firstImage.classList.add('-active');
+    image.classList.remove('-active');
+    checked(arrImages.findIndex(item => item.className=='vsbl -active'));
 });
 
+btnPrev.addEventListener('click', ()=>{
+    let image = document.querySelector('.-active');
+    let slider = document.querySelector('.slider');
+    image.previousElementSibling ? image.previousElementSibling.classList.add('-active') : slider.lastElementChild.classList.add('-active');
+    image.classList.remove('-active');
+    checked(arrImages.findIndex(item => item.className=='vsbl -active'));
+});
 
-document.querySelector('.slider-button-next .slider__arrow').onclick = function () {
-    if (current+1 == images.length) {
-        current=0;
+function checked(index) {
+    for (item of inputs) {
+        item.removeAttribute("checked");
     }
-    else {
-        current++;
-    }
-    slider();
-};
-document.querySelector('.slider-button-prev .slider__arrow').onclick = function () {
-    if (current-1 == -1) {
-        current = images.length -1;
-    }
-    else {
-        current--;
-    }
-    slider();
-};
+    inputs[index].setAttribute("checked", "true");
+}
 
+containerDots.addEventListener('click', (e)=>{
+    e.preventDefault();
+    checked(arrInputs.findIndex(item => item == e.target.previousElementSibling));
+    setImage(arrInputs.findIndex(item => item == e.target.previousElementSibling));
+});
+
+function setImage(index) {
+    for (item of imagesArr) {
+        item.classList.remove('-active');
+    }
+    imagesArr[index].classList.add('-active');
+}
 
 let offset =0;
 const line = document.querySelector('.games-section__cards');
