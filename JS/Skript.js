@@ -4,14 +4,19 @@ const burger = document.querySelector('.header__burger');
         burger.classList.toggle('burger_active');
         menu.classList.toggle('active');
 });
-//----------------- Main  Slider CLASS ES6 -------------------------------
+//----------------- OOP Sliders CLASS ES6 -------------------------------
 window.onload = function() {
-    const components = {
-        btnNext: document.querySelector('.slider-button-next .slider__arrow'),
-        btnPrev: document.querySelector('.slider-button-prev .slider__arrow'),
+    const componentsMainSlider = {
+        btnNext: document.querySelector('.slider-button-next'),
+        btnPrev: document.querySelector('.slider-button-prev'),
         images: document.querySelectorAll('.vsbl'),
         inputs: document.querySelectorAll('.radio_input'),
         containerDots: document.querySelector('.container-dots')
+    };
+    const sectionGamesSliderComponents = {
+        slideArrow: document.querySelector('.games-section-arrow'),
+        cards: document.querySelectorAll('.games-section__cards-item'),
+        sliderLine: document.querySelector('.games-section__cards'),
     };
     class MainSlider {
         constructor(data) {
@@ -46,78 +51,33 @@ window.onload = function() {
         dotsSlide(e) {
             e.preventDefault();
             let arr = Array.from(this.inputs);
-            this.counter = arr.findIndex(item => item === e.target.previousElementSibling);
-            this.setImage();
+            e.target.className =='radio_label' ? this.setImage(this.counter = arr.findIndex(item => item === e.target.previousElementSibling)) : null;
         }
     };
-    new MainSlider(components);
+
+    class GamesSectionSlider {
+        constructor(data) {
+            this.slideArrow = data.slideArrow;
+            this.cards = data.cards;
+            this.sliderLine = data.sliderLine;
+            this.width = this.cards[0].offsetWidth + parseFloat(getComputedStyle(this.cards[0])['margin-left']) + parseFloat(getComputedStyle(this.cards[0])['margin-right']);
+            this.slideArrow.addEventListener('click', this.goSlide.bind(this));
+            this.count = 1;
+        };
+        goSlide() {
+            if (this.sliderLine.getBoundingClientRect().x + this.sliderLine.offsetWidth < document.documentElement.clientWidth) {
+                this.count = 0;
+            }
+            if (this.sliderLine.offsetWidth > document.documentElement.clientWidth) {
+                this.sliderLine.style.transform = `translateX(-${this.width*this.count}px)`;
+                this.count++;
+            }
+        };
+    };
+    new MainSlider(componentsMainSlider);
+    new GamesSectionSlider(sectionGamesSliderComponents);
 };
-//---------- end Main Slider CLASS ES6 ---------------------
-
-// const btnNext = document.querySelector('.slider-button-next .slider__arrow');
-// const btnPrev = document.querySelector('.slider-button-prev .slider__arrow');
-// const imagesArr = document.querySelectorAll('.vsbl');
-// const inputs = document.querySelectorAll('.radio_input');
-// const containerDots = document.querySelector('.container-dots');
-// const arrImages = [];
-// const arrInputs = [];
-// for (let i=0; i<imagesArr.length; i++) {
-//     arrImages.push(imagesArr[i]);
-//     arrInputs.push(inputs[i]);
-// }
-
-// btnNext.addEventListener('click', ()=>{
-//     let firstImage = document.querySelector('.slider img');
-//     let image = document.querySelector('.-active');
-//     image.nextElementSibling ? image.nextElementSibling.classList.add('-active') : firstImage.classList.add('-active');
-//     image.classList.remove('-active');
-//     checked(arrImages.findIndex(item => item.className=='vsbl -active'));
-// });
-
-// btnPrev.addEventListener('click', ()=>{
-//     let image = document.querySelector('.-active');
-//     let slider = document.querySelector('.slider');
-//     image.previousElementSibling ? image.previousElementSibling.classList.add('-active') : slider.lastElementChild.classList.add('-active');
-//     image.classList.remove('-active');
-//     checked(arrImages.findIndex(item => item.className=='vsbl -active'));
-// });
-
-// function checked(index) {
-//     for (item of inputs) {
-//         item.removeAttribute("checked");
-//     }
-//     inputs[index].setAttribute("checked", "true");
-// }
-
-// containerDots.addEventListener('click', (e)=>{
-//     e.preventDefault();
-//     checked(arrInputs.findIndex(item => item == e.target.previousElementSibling));
-//     setImage(arrInputs.findIndex(item => item == e.target.previousElementSibling));
-// });
-
-// function setImage(index) {
-//     for (item of imagesArr) {
-//         item.classList.remove('-active');
-//     }
-//     imagesArr[index].classList.add('-active');
-// }
-
-const availableScreenWidth = document.documentElement.clientWidth;
-const gamesSlideArrow = document.querySelector('.games-section-arrow');
-const cardWidth = document.querySelector('.games-section__cards-item').offsetWidth;
-const gamesSlider = document.querySelector('.games-section__cards');
-
-
-// let offset =0;
-// const line = document.querySelector('.games-section__cards');
-// const availableScreenWidth = document.documentElement.clientWidth;
-// document.querySelector('.games-section-arrow').addEventListener('click', function() {
-//     offset += 320;
-//     if (offset > 2560) {
-//         offset = 0;
-//     };
-//     line.style.left = -offset + 'px';
-// });
+//---------- end OOP Sliders CLASS ES6 ---------------------
 
 function list (menu) {
 let parentMenu = menu.parentNode;

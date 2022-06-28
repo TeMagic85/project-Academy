@@ -39,7 +39,7 @@
     &__cards {
         display: flex;
         position: relative;
-        transition: all 0.8s ease 0.1s;
+        transition: all 0.3s ease;
         > .games-section__cards-item:nth-of-type(2),
         .games-section__cards-item:nth-of-type(3),
         .games-section__cards-item:nth-of-type(4),
@@ -57,11 +57,7 @@
         margin-left: 14.5px;
         margin-right: 14.5px;
         transition: all 0.2s ease;
-        @media screen and (width: 540px) {
-            margin-left: 5%;
-            margin-right: 5%;
-        }
-        @media screen and (max-width: 341px) {
+        @media screen and (max-width: 347px) {
             margin-left: 2.5px;
             margin-right: 2.5px;
         }

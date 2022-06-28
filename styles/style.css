@@ -1467,8 +1467,8 @@ template {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-transition: all 0.8s ease 0.1s;
-  transition: all 0.8s ease 0.1s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .games-section__cards > .games-section__cards-item:nth-of-type(2) .wrapper-link,
@@ -1487,14 +1487,7 @@ template {
   transition: all 0.2s ease;
 }
 
-@media screen and (width: 540px) {
-  .games-section__cards-item {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
-
-@media screen and (max-width: 341px) {
+@media screen and (max-width: 347px) {
   .games-section__cards-item {
     margin-left: 2.5px;
     margin-right: 2.5px;
@@ -2087,7 +2080,8 @@ template {
 }
 
 .highlights__cards-items, .games-section__cards-item {
-  max-width: 318px;
+  width: 318px;
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: white;
@@ -2104,6 +2098,8 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .highlights__cards-items span, .games-section__cards-item span {
@@ -2132,6 +2128,10 @@ template {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 22px;
+}
+
+.highlights__cards-images img, .games-section__cards-images img {
+  width: 318px;
 }
 
 body {

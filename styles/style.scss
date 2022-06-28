@@ -51,7 +51,8 @@ $maxWidthContainer: 1077px;
 }
 }
 %CardsItemsStyle {
-        max-width: 318px;
+        width: 318px;
+        position: relative;
         box-sizing: border-box;
         background-color: white;
         border: solid 1px #8DD83D;
@@ -60,6 +61,7 @@ $maxWidthContainer: 1077px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        transition: all 0.3s linear;
         & span {
             color: #435766;
             font-size: 18px;
@@ -81,6 +83,9 @@ $maxWidthContainer: 1077px;
         align-content: center;
         justify-content: center;
         margin-bottom: 22px;
+        & img {
+            width: 318px;
+        }
 }
 //</ШАБЛОНЫ> ================================================================
 body {
